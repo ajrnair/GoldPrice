@@ -276,19 +276,6 @@
             margin-bottom: 1rem;
         }
 
-        details.panel {
-            display: block;
-        }
-
-        details.panel > summary {
-            cursor: pointer;
-            list-style: none;
-        }
-
-        details.panel > summary::-webkit-details-marker {
-            display: none;
-        }
-
         .panel-header {
             display: flex;
             align-items: center;
@@ -609,29 +596,6 @@
             </div>
         </section>
 
-        <details class="panel">
-            <summary class="panel-header">
-                <div>
-                    <h2>Source Coverage</h2>
-                    <span class="timestamp" id="coverageSummary">Tracked quietly when a public quote is unavailable</span>
-                </div>
-                <span class="badge">Show</span>
-            </summary>
-            <div class="table-wrap">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Source</th>
-                            <th>Type</th>
-                            <th>Status</th>
-                            <th>Cadence</th>
-                            <th>Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody id="coverageRows"></tbody>
-                </table>
-            </div>
-        </details>
     </main>
 
     <footer>
@@ -891,28 +855,6 @@
             `).join("");
         }
 
-        function renderSourceCoverage() {
-            const coverageRates = goldData.rates
-                .filter(rate => rate.status === "unavailable" || rate.status === "stale")
-                .sort((a, b) => rateRank(a) - rateRank(b) || a.source_name.localeCompare(b.source_name));
-            const coverageSummary = document.getElementById("coverageSummary");
-            coverageSummary.textContent = coverageRates.length
-                ? `${coverageRates.length} sources tracked here because no public quote was parsed`
-                : "All configured sources returned parsed prices";
-            document.getElementById("coverageRows").innerHTML = coverageRates.map(rate => `
-                <tr>
-                    <td>
-                        <span class="source-cell">${rate.source_name}</span>
-                        <span class="source-note">${rate.market} · ${rate.purity} · ${rate.fineness}</span>
-                    </td>
-                    <td>${rate.source_type}</td>
-                    <td><div class="badge-row" style="justify-content:flex-start">${statusBadge(rate)}</div></td>
-                    <td>${rate.cadence}</td>
-                    <td>${rate.notes}</td>
-                </tr>
-            `).join("") || `<tr><td colspan="5">All configured sources returned parsed prices.</td></tr>`;
-        }
-
         function populateConverterSources() {
             const sourceSelect = document.getElementById("sourceSelect");
             const rates = available24kRates();
@@ -974,7 +916,6 @@
                 renderContext();
                 renderBuyerRows();
                 renderMarketRows();
-                renderSourceCoverage();
                 populateConverterSources();
                 bindConverter();
                 updateConverter();
