@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="24K gold price benchmarks across Dubai, India benchmarks, Indian retail, and USD/INR.">
+    <title>Gold Price Benchmarks</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --graphite: #202326;
+            --graphite-soft: #30353a;
+            --ink: #202326;
+            --muted: #70757d;
+            --line: #ded8cc;
+            --paper: #fbfaf6;
+            --surface: #ffffff;
+            --surface-warm: #f4efe4;
+            --gold: #b98a2d;
+            --gold-dark: #85601f;
+            --gold-soft: #f7ead0;
+            --green: #24745c;
+            --red: #b5483f;
+            --blue: #426a8f;
+            --shadow-sm: 0 1px 2px rgba(32, 35, 38, 0.07);
+            --shadow-md: 0 12px 28px rgba(32, 35, 38, 0.1);
+        }
+
+        body {
+            min-height: 100vh;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        header {
+            background:
+                linear-gradient(135deg, rgba(185, 138, 45, 0.28), rgba(185, 138, 45, 0.02)),
+                var(--graphite);
+            color: #fffdf7;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 1.5rem;
+            align-items: end;
+            padding: 2.5rem 1rem 2rem;
+        }
+
+        .eyebrow {
+            color: #f1c46f;
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin-top: 0.35rem;
+            font-size: 2.45rem;
+            line-height: 1.08;
+            font-weight: 850;
+        }
+
+        .subtitle {
+            max-width: 640px;
+            margin-top: 0.65rem;
+            color: rgba(255, 253, 247, 0.82);
+            font-size: 1rem;
+        }
+
+        .fx-pill {
+            min-width: 235px;
+            padding: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .pill-label,
+        .metric-label,
+        .field-label,
+        th {
+            color: var(--muted);
+            font-size: 0.74rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .fx-pill .pill-label {
+            color: rgba(255, 253, 247, 0.68);
+        }
+
+        .fx-value {
+            margin-top: 0.1rem;
+            color: #fffdf7;
+            font-size: 1.7rem;
+            font-weight: 850;
+        }
+
+        .fx-source {
+            margin-top: 0.35rem;
+            color: rgba(255, 253, 247, 0.68);
+            font-size: 0.82rem;
+        }
+
+        main.container {
+            padding-top: 1.5rem;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 0.85rem;
+        }
+
+        h2 {
+            color: var(--ink);
+            font-size: 1.18rem;
+            line-height: 1.2;
+        }
+
+        .timestamp {
+            color: var(--muted);
+            font-size: 0.86rem;
+        }
+
+        .primary-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .card,
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .card {
+            min-width: 0;
+            padding: 1rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(185, 138, 45, 0.42);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-topline {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            gap: 0.7rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.03rem;
+            font-weight: 820;
+        }
+
+        .card-subtitle {
+            margin-top: 0.12rem;
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+            justify-content: flex-end;
+        }
+
+        .badge {
+            display: inline-flex;
+            min-height: 1.5rem;
+            align-items: center;
+            padding: 0.25rem 0.48rem;
+            border-radius: 999px;
+            background: var(--surface-warm);
+            color: var(--gold-dark);
+            font-size: 0.68rem;
+            font-weight: 820;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .badge.official {
+            background: #e8f3ee;
+            color: var(--green);
+        }
+
+        .badge.digital,
+        .badge.consumer,
+        .badge.live {
+            background: #e8f0f7;
+            color: var(--blue);
+        }
+
+        .badge.jewellery,
+        .badge.retail,
+        .badge.mirror,
+        .badge.market {
+            background: var(--gold-soft);
+            color: var(--gold-dark);
+        }
+
+        .badge.unavailable,
+        .badge.stale {
+            background: #f7e6e4;
+            color: var(--red);
+        }
+
+        .big-number {
+            color: var(--gold-dark);
+            font-size: 2rem;
+            line-height: 1;
+            font-weight: 880;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.6rem;
+            margin-top: 1rem;
+        }
+
+        .metric {
+            min-width: 0;
+            padding: 0.7rem;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #fffdf8;
+        }
+
+        .metric-value {
+            margin-top: 0.1rem;
+            font-size: 1.02rem;
+            font-weight: 820;
+            overflow-wrap: anywhere;
+        }
+
+        .grid-two {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+
+        .panel {
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        details.panel {
+            display: block;
+        }
+
+        details.panel > summary {
+            cursor: pointer;
+            list-style: none;
+        }
+
+        details.panel > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            padding: 1rem 1rem 0.75rem;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 960px;
+        }
+
+        th,
+        td {
+            padding: 0.82rem 1rem;
+            border-bottom: 1px solid var(--line);
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th:last-child,
+        td:last-child {
+            text-align: right;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .source-cell {
+            font-weight: 780;
+        }
+
+        .source-note {
+            display: block;
+            margin-top: 0.12rem;
+            color: var(--muted);
+            font-size: 0.78rem;
+            font-weight: 500;
+        }
+
+        .spread-positive {
+            color: var(--red);
+            font-weight: 780;
+        }
+
+        .spread-negative {
+            color: var(--green);
+            font-weight: 780;
+        }
+
+        .converter {
+            padding: 1rem;
+        }
+
+        .field {
+            margin-bottom: 0.85rem;
+        }
+
+        .field-label {
+            display: block;
+            margin-bottom: 0.28rem;
+        }
+
+        input,
+        select {
+            width: 100%;
+            min-height: 2.75rem;
+            border: 1.5px solid var(--line);
+            border-radius: 8px;
+            background: #fffdf8;
+            color: var(--ink);
+            font: inherit;
+            padding: 0.7rem 0.8rem;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(185, 138, 45, 0.18);
+        }
+
+        .field-row {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.75rem;
+        }
+
+        .converter-result {
+            padding: 0.85rem;
+            border: 1px solid rgba(185, 138, 45, 0.34);
+            border-radius: 8px;
+            background: var(--gold-soft);
+        }
+
+        .result-value {
+            color: var(--gold-dark);
+            font-size: 1.35rem;
+            font-weight: 850;
+        }
+
+        .result-sub {
+            margin-top: 0.25rem;
+            color: #5f5545;
+            font-size: 0.85rem;
+        }
+
+        .context-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .context-card {
+            padding: 0.85rem;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #fffdf8;
+        }
+
+        .empty {
+            padding: 1rem;
+            color: var(--muted);
+        }
+
+        footer {
+            padding: 2rem 1rem;
+            color: var(--muted);
+            text-align: center;
+            font-size: 0.84rem;
+        }
+
+        @media (max-width: 900px) {
+            .hero,
+            .grid-two,
+            .primary-grid,
+            .context-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .fx-pill {
+                min-width: 0;
+            }
+
+            .field-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+            h1 {
+                font-size: 1.9rem;
+            }
+
+            .container {
+                padding: 0.85rem;
+            }
+
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title,
+            .panel-header {
+                display: grid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container hero">
+            <div>
+                <div class="eyebrow">24K first</div>
+                <h1>Gold Price Benchmarks</h1>
+                <p class="subtitle">India-first gold rates with IBJA, Dubai, live global spot, retail bullion, and USD/INR in one buyer-focused dashboard.</p>
+            </div>
+            <div class="fx-pill">
+                <div class="pill-label">USD/INR</div>
+                <div class="fx-value" id="fxValue">Loading</div>
+                <div class="fx-source" id="fxSource">Fetching source</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="section-title">
+            <h2>Primary 24K Benchmarks</h2>
+            <div class="timestamp" id="generatedAt">Loading data</div>
+        </div>
+        <section class="primary-grid" id="primaryGrid"></section>
+
+        <section class="grid-two">
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>24K Comparison</h2>
+                    <span class="timestamp">Per gram, 10g, USD/oz, and spreads</span>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+	                            <tr>
+	                                <th>Source</th>
+	                                <th>Type</th>
+	                                <th>Native</th>
+	                                <th>INR/g</th>
+	                                <th>INR/10g</th>
+	                                <th>USD/g</th>
+	                                <th>USD/oz</th>
+	                                <th>Spread vs IBJA</th>
+	                            </tr>
+                        </thead>
+                        <tbody id="comparisonRows"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>Purity Converter</h2>
+                </div>
+                <div class="converter">
+                    <div class="field-row">
+                        <div class="field">
+                            <label class="field-label" for="quantityInput">Quantity</label>
+                            <input id="quantityInput" type="number" min="0" step="0.01" value="10">
+                        </div>
+                        <div class="field">
+                            <label class="field-label" for="unitSelect">Unit</label>
+                            <select id="unitSelect">
+                                <option value="gram">Gram</option>
+                                <option value="10g">10g</option>
+                                <option value="tola">Tola</option>
+                                <option value="troy_ounce">Troy ounce</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field-row">
+                        <div class="field">
+                            <label class="field-label" for="puritySelect">Purity</label>
+                            <select id="puritySelect">
+                                <option value="999">24K / 999</option>
+                                <option value="916">22K / 916</option>
+                                <option value="750">18K / 750</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label class="field-label" for="sourceSelect">Benchmark</label>
+                            <select id="sourceSelect"></select>
+                        </div>
+                    </div>
+                    <div class="converter-result">
+                        <div class="result-value" id="converterInr">Unavailable</div>
+                        <div class="result-sub" id="converterUsd">Select an available 24K benchmark</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="panel-header">
+                <h2>22K Jewellery Context</h2>
+                <span class="timestamp">916 purity shown below the 24K benchmark</span>
+            </div>
+            <div class="context-grid" id="contextGrid"></div>
+        </section>
+
+        <section class="panel">
+            <div class="panel-header">
+                <h2>India Buyer Context</h2>
+                <span class="timestamp">Retail, bullion, jewellery, and consumer references</span>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Purity</th>
+                            <th>Status</th>
+                            <th>INR/g</th>
+                            <th>USD/g</th>
+                            <th>USD/oz</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="buyerRows"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel" id="marketPanel" hidden>
+            <div class="panel-header">
+                <h2>Market Context</h2>
+                <span class="timestamp">Futures and broad-market portals, not buyer prices</span>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Native</th>
+                            <th>INR/g</th>
+                            <th>USD/oz</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="marketRows"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <details class="panel">
+            <summary class="panel-header">
+                <div>
+                    <h2>Source Coverage</h2>
+                    <span class="timestamp" id="coverageSummary">Tracked quietly when a public quote is unavailable</span>
+                </div>
+                <span class="badge">Show</span>
+            </summary>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Cadence</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="coverageRows"></tbody>
+                </table>
+            </div>
+        </details>
+    </main>
+
+    <footer>
+        24K/999 is the primary benchmark. 22K/916 is jewellery context. Unavailable sources are not estimated.
+    </footer>
+
+    <script>
+        let goldData = null;
+
+        const UNIT_GRAMS = {
+            gram: 1,
+            "10g": 10,
+            tola: 11.6638038,
+            troy_ounce: 31.1034768
+        };
+
+        function number(value, digits = 2) {
+            if (value === null || value === undefined || Number.isNaN(Number(value))) return "Unavailable";
+            return Number(value).toLocaleString("en-IN", {
+                minimumFractionDigits: digits,
+                maximumFractionDigits: digits
+            });
+        }
+
+        function currency(value, code) {
+            if (value === null || value === undefined || Number.isNaN(Number(value))) return "Unavailable";
+            return new Intl.NumberFormat("en-IN", {
+                style: "currency",
+                currency: code,
+                maximumFractionDigits: 2
+            }).format(Number(value));
+        }
+
+        function perGram(value, code) {
+            if (value === null || value === undefined || Number.isNaN(Number(value))) return "Unavailable";
+            return `${currency(value, code)}/g`;
+        }
+
+        function statusBadge(rate) {
+            const sourceClass = String(rate.source_type || "").toLowerCase().replace(/\s+/g, "-");
+            const statusClass = rate.status === "unavailable" ? " unavailable" : rate.status === "stale" ? " stale" : "";
+            return `
+                <span class="badge ${sourceClass}">${rate.source_type || "Source"}</span>
+                <span class="badge ${rate.status}${statusClass}">${rate.status || "unknown"}</span>
+            `;
+        }
+
+        function sourceSubtitle(rate) {
+            if (!rate) return "No source available";
+            return `${rate.market} · ${rate.purity} · ${rate.fineness}`;
+        }
+
+        function available24kRates() {
+            return goldData.rates.filter(rate =>
+                rate.purity === "24K" &&
+                rate.status !== "unavailable" &&
+                rate.price_inr_per_gram !== null
+            );
+        }
+
+        function findPrimaryRates() {
+            const rates = goldData.rates;
+            return [
+                {
+                    label: "Global Spot 24K",
+                    rate: rates.find(rate => rate.id === "global-spot-xau")
+                },
+                {
+                    label: "India IBJA 24K",
+                    rate: rates.find(rate => rate.id === "ibja-999")
+                },
+                {
+                    label: "Dubai 24K",
+                    rate: rates.find(rate => rate.market === "Dubai" && rate.purity === "24K")
+                }
+            ].filter(item => item.rate && item.rate.status !== "unavailable" && item.rate.price_inr_per_gram !== null);
+        }
+
+        function nativePrice(rate) {
+            if (!rate || rate.price === null) return "Unavailable";
+            return `${currency(rate.price, rate.currency)} / ${rate.unit}`;
+        }
+
+        function spreadFor(rate) {
+            if (!goldData.spreads || !rate || rate.status === "unavailable") return "Unavailable";
+            const ibjaSpread = goldData.spreads.find(spread =>
+                spread.basis_rate_id === "ibja-999" && spread.compared_rate_id === rate.id
+            );
+            if (!ibjaSpread) return "Benchmark";
+            const value = Number(ibjaSpread.pct_diff);
+            const sign = value > 0 ? "+" : "";
+            const css = value > 0 ? "spread-positive" : "spread-negative";
+            return `<span class="${css}">${sign}${number(value)}%</span>`;
+        }
+
+        function rateRank(rate) {
+            const ranks = {
+                "global-spot-xau": 1,
+                "ibja-999": 2,
+                "dubai-999": 3
+            };
+            const typeRanks = {
+                Retail: 4,
+                Digital: 5,
+                Consumer: 6,
+                Jewellery: 7,
+                Market: 8
+            };
+            return ranks[rate.id] || typeRanks[rate.source_type] || 20;
+        }
+
+        function renderPrimaryCards() {
+            const cards = findPrimaryRates();
+            document.getElementById("primaryGrid").innerHTML = cards.map(item => {
+                const rate = item.rate;
+                return `
+                    <article class="card">
+                        <div class="card-topline">
+                            <div>
+                                <div class="card-title">${item.label}</div>
+                                <div class="card-subtitle">${sourceSubtitle(rate)}</div>
+                            </div>
+                            <div class="badge-row">${rate ? statusBadge(rate) : ""}</div>
+                        </div>
+                        <div class="big-number">${perGram(rate?.price_inr_per_gram, "INR")}</div>
+                        <div class="metrics">
+                            <div class="metric">
+                                <div class="metric-label">INR/10g</div>
+                                <div class="metric-value">${currency(rate?.price_inr_per_10g, "INR")}</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-label">USD/g</div>
+                                <div class="metric-value">${currency(rate?.price_usd_per_gram, "USD")}</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-label">USD/troy oz</div>
+                                <div class="metric-value">${currency(rate?.price_usd_per_oz, "USD")}</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-label">Native</div>
+                                <div class="metric-value">${nativePrice(rate)}</div>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            }).join("") || `<article class="card">No primary 24K benchmarks available this run.</article>`;
+        }
+
+        function renderComparisonRows() {
+            const rows = goldData.rates
+                .filter(rate =>
+                    rate.purity === "24K" &&
+                    rate.source_type !== "Market" &&
+                    rate.status !== "unavailable" &&
+                    rate.price_inr_per_gram !== null
+                )
+                .sort((a, b) => rateRank(a) - rateRank(b))
+                .map(rate => `
+                    <tr>
+                        <td>
+                            <span class="source-cell">${rate.source_name}</span>
+                            <span class="source-note">${rate.market} · ${rate.source_type}</span>
+                        </td>
+                        <td><div class="badge-row" style="justify-content:flex-start">${statusBadge(rate)}</div></td>
+                        <td>${nativePrice(rate)}</td>
+                        <td>${currency(rate.price_inr_per_gram, "INR")}</td>
+                        <td>${currency(rate.price_inr_per_10g, "INR")}</td>
+                        <td>${currency(rate.price_usd_per_gram, "USD")}</td>
+                        <td>${currency(rate.price_usd_per_oz, "USD")}</td>
+                        <td>${spreadFor(rate)}</td>
+                    </tr>
+                `);
+            document.getElementById("comparisonRows").innerHTML = rows.join("") || `<tr><td colspan="8">No priced 24K comparison rows available.</td></tr>`;
+        }
+
+        function derivedContextCards() {
+            const ibja24 = goldData.rates.find(rate => rate.id === "ibja-999");
+            const ibja22 = goldData.rates.find(rate => rate.id === "ibja-916");
+            const derived22 = ibja24?.price_inr_per_gram ? ibja24.price_inr_per_gram * (916 / 999) : null;
+            const derived18 = ibja24?.price_inr_per_gram ? ibja24.price_inr_per_gram * (750 / 999) : null;
+            return [
+                {
+                    title: "IBJA 22K / 916",
+                    value: ibja22?.price_inr_per_gram,
+                    note: ibja22?.status === "unavailable" ? "Not parsed from IBJA" : "Actual IBJA 916 rate"
+                },
+                {
+                    title: "24K-derived 22K",
+                    value: derived22,
+                    note: "999 benchmark multiplied by 916/999"
+                },
+                {
+                    title: "24K-derived 18K",
+                    value: derived18,
+                    note: "999 benchmark multiplied by 750/999"
+                }
+            ];
+        }
+
+        function renderContext() {
+            document.getElementById("contextGrid").innerHTML = derivedContextCards().map(card => `
+                <div class="context-card">
+                    <div class="metric-label">${card.title}</div>
+                    <div class="big-number">${perGram(card.value, "INR")}</div>
+                    <div class="source-note">${card.note}</div>
+                </div>
+            `).join("");
+        }
+
+        function renderBuyerRows() {
+            const buyerTypes = new Set(["Retail", "Digital", "Consumer", "Jewellery"]);
+            const buyerRates = goldData.rates
+                .filter(rate =>
+                    buyerTypes.has(rate.source_type) &&
+                    rate.status !== "unavailable" &&
+                    rate.price_inr_per_gram !== null
+                )
+                .sort((a, b) => rateRank(a) - rateRank(b));
+
+            document.getElementById("buyerRows").innerHTML = buyerRates.map(rate => `
+                <tr>
+                    <td>
+                        <span class="source-cell">${rate.source_name}</span>
+                        <span class="source-note">${rate.market}</span>
+                    </td>
+                    <td>${rate.purity} / ${rate.fineness}</td>
+                    <td><div class="badge-row" style="justify-content:flex-start">${statusBadge(rate)}</div></td>
+                    <td>${currency(rate.price_inr_per_gram, "INR")}</td>
+                    <td>${currency(rate.price_usd_per_gram, "USD")}</td>
+                    <td>${currency(rate.price_usd_per_oz, "USD")}</td>
+                    <td>${rate.notes}</td>
+                </tr>
+            `).join("") || `<tr><td colspan="7">No priced buyer-context sources available this run.</td></tr>`;
+        }
+
+        function renderMarketRows() {
+            const marketRates = goldData.rates
+                .filter(rate =>
+                    rate.source_type === "Market" &&
+                    rate.status !== "unavailable" &&
+                    rate.price_inr_per_gram !== null
+                )
+                .sort((a, b) => rateRank(a) - rateRank(b));
+            const panel = document.getElementById("marketPanel");
+            panel.hidden = marketRates.length === 0;
+            document.getElementById("marketRows").innerHTML = marketRates.map(rate => `
+                <tr>
+                    <td>
+                        <span class="source-cell">${rate.source_name}</span>
+                        <span class="source-note">${rate.market}</span>
+                    </td>
+                    <td>${nativePrice(rate)}</td>
+                    <td>${currency(rate.price_inr_per_gram, "INR")}</td>
+                    <td>${currency(rate.price_usd_per_oz, "USD")}</td>
+                    <td>${rate.notes}</td>
+                </tr>
+            `).join("");
+        }
+
+        function renderSourceCoverage() {
+            const coverageRates = goldData.rates
+                .filter(rate => rate.status === "unavailable" || rate.status === "stale")
+                .sort((a, b) => rateRank(a) - rateRank(b) || a.source_name.localeCompare(b.source_name));
+            const coverageSummary = document.getElementById("coverageSummary");
+            coverageSummary.textContent = coverageRates.length
+                ? `${coverageRates.length} sources tracked here because no public quote was parsed`
+                : "All configured sources returned parsed prices";
+            document.getElementById("coverageRows").innerHTML = coverageRates.map(rate => `
+                <tr>
+                    <td>
+                        <span class="source-cell">${rate.source_name}</span>
+                        <span class="source-note">${rate.market} · ${rate.purity} · ${rate.fineness}</span>
+                    </td>
+                    <td>${rate.source_type}</td>
+                    <td><div class="badge-row" style="justify-content:flex-start">${statusBadge(rate)}</div></td>
+                    <td>${rate.cadence}</td>
+                    <td>${rate.notes}</td>
+                </tr>
+            `).join("") || `<tr><td colspan="5">All configured sources returned parsed prices.</td></tr>`;
+        }
+
+        function populateConverterSources() {
+            const sourceSelect = document.getElementById("sourceSelect");
+            const rates = available24kRates();
+            sourceSelect.innerHTML = rates.map(rate => `
+                <option value="${rate.id}">${rate.source_name} (${rate.market})</option>
+            `).join("");
+            if (!rates.length) {
+                sourceSelect.innerHTML = `<option value="">No available 24K rate</option>`;
+            }
+        }
+
+        function updateConverter() {
+            const quantity = Number(document.getElementById("quantityInput").value || 0);
+            const unit = document.getElementById("unitSelect").value;
+            const fineness = Number(document.getElementById("puritySelect").value);
+            const sourceId = document.getElementById("sourceSelect").value;
+            const rate = goldData.rates.find(item => item.id === sourceId);
+
+            if (!rate || !rate.price_inr_per_gram || quantity <= 0) {
+                document.getElementById("converterInr").textContent = "Unavailable";
+                document.getElementById("converterUsd").textContent = "Select an available 24K benchmark";
+                return;
+            }
+
+            const grams = quantity * UNIT_GRAMS[unit];
+            const purityRatio = fineness / rate.fineness;
+            const inrValue = grams * rate.price_inr_per_gram * purityRatio;
+            const usdValue = rate.price_usd_per_gram ? grams * rate.price_usd_per_gram * purityRatio : null;
+
+            document.getElementById("converterInr").textContent = currency(inrValue, "INR");
+            document.getElementById("converterUsd").textContent = `${currency(usdValue, "USD")} · ${number(grams, 3)}g fine-adjusted from ${rate.source_name}`;
+        }
+
+        function renderMeta() {
+            const fx = goldData.fx || {};
+            document.getElementById("fxValue").textContent = fx.usd_inr ? number(fx.usd_inr, 4) : "Unavailable";
+            document.getElementById("fxSource").textContent = `${fx.source || "Unknown"} · ${fx.source_type || "FX"}`;
+            document.getElementById("generatedAt").textContent = `Updated ${new Date(goldData.generated_at).toLocaleString("en-IN", {
+                dateStyle: "medium",
+                timeStyle: "short"
+            })}`;
+        }
+
+        function bindConverter() {
+            ["quantityInput", "unitSelect", "puritySelect", "sourceSelect"].forEach(id => {
+                document.getElementById(id).addEventListener("input", updateConverter);
+                document.getElementById(id).addEventListener("change", updateConverter);
+            });
+        }
+
+        async function loadData() {
+            try {
+                const response = await fetch("data.json");
+                if (!response.ok) throw new Error(`Unable to load data.json: ${response.status}`);
+                goldData = await response.json();
+                renderMeta();
+                renderPrimaryCards();
+                renderComparisonRows();
+                renderContext();
+                renderBuyerRows();
+                renderMarketRows();
+                renderSourceCoverage();
+                populateConverterSources();
+                bindConverter();
+                updateConverter();
+            } catch (error) {
+                console.error(error);
+                document.getElementById("primaryGrid").innerHTML = `<div class="card">Unable to load gold price data.</div>`;
+            }
+        }
+
+        loadData();
+    </script>
+</body>
+</html>
