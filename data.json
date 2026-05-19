@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-19T18:29:36Z",
+  "generated_at": "2026-05-19T20:17:49Z",
   "default_city": "Mumbai",
   "fx": {
     "usd_inr": 96.39,
     "source": "Fawaz Ahmed currency-api",
     "source_type": "Live fallback",
     "source_url": "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json",
-    "as_of": "2026-05-19T18:29:37Z",
+    "as_of": "2026-05-19T20:17:50Z",
     "status": "fresh",
     "cadence": "Live public no-key FX fallback",
     "notes": "Used because the official FBIL reference rate was not parseable from public page text."
@@ -23,15 +23,15 @@
       "fineness": 999,
       "currency": "USD",
       "unit": "troy_ounce",
-      "price": 4498.0,
-      "as_of": "2026-05-19T18:29:06Z",
+      "price": 4486.2,
+      "as_of": "2026-05-19T20:17:07Z",
       "status": "fresh",
       "cadence": "Live no-key public XAU/USD spot feed",
       "notes": "Live global spot context. Not an official fixing or a retail buyer price.",
-      "price_inr_per_gram": 13939.35,
-      "price_usd_per_gram": 144.61,
-      "price_inr_per_10g": 139393.49,
-      "price_usd_per_oz": 4498.0
+      "price_inr_per_gram": 13902.78,
+      "price_usd_per_gram": 144.23,
+      "price_inr_per_10g": 139027.81,
+      "price_usd_per_oz": 4486.2
     },
     {
       "id": "ibja-999",
@@ -224,7 +224,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 14528.0,
-      "as_of": "2026-05-19T18:29:43Z",
+      "as_of": "2026-05-19T20:17:59Z",
       "status": "fresh",
       "cadence": "Retail jewellery page",
       "notes": "Retail jewellery context. Final purchase price may include GST, making charges, and SKU-level pricing.",
@@ -243,15 +243,15 @@
       "fineness": 999,
       "currency": "INR",
       "unit": "10g",
-      "price": 152997.0,
+      "price": 152838.0,
       "as_of": "2026-05-19",
       "status": "fresh",
       "cadence": "Live Mumbai bullion page",
       "notes": "Mumbai city retail 999 quote. GST and charges depend on the displayed product/transaction type.",
-      "price_inr_per_gram": 15299.7,
-      "price_usd_per_gram": 158.73,
-      "price_inr_per_10g": 152997.0,
-      "price_usd_per_oz": 4936.96
+      "price_inr_per_gram": 15283.8,
+      "price_usd_per_gram": 158.56,
+      "price_inr_per_10g": 152838.0,
+      "price_usd_per_oz": 4931.83
     },
     {
       "id": "aib-mumbai-rtgs-999",
@@ -263,15 +263,15 @@
       "fineness": 999,
       "currency": "INR",
       "unit": "10g",
-      "price": 158691.0,
+      "price": 158339.0,
       "as_of": "2026-05-19",
       "status": "fresh",
       "cadence": "Live Mumbai bullion page",
       "notes": "Mumbai RTGS 999 quote. Shown separately because it can differ from retail counter pricing.",
-      "price_inr_per_gram": 15869.1,
-      "price_usd_per_gram": 164.63,
-      "price_inr_per_10g": 158691.0,
-      "price_usd_per_oz": 5120.7
+      "price_inr_per_gram": 15833.9,
+      "price_usd_per_gram": 164.27,
+      "price_inr_per_10g": 158339.0,
+      "price_usd_per_oz": 5109.34
     },
     {
       "id": "aib-mumbai-gst-999",
@@ -283,15 +283,15 @@
       "fineness": 999,
       "currency": "INR",
       "unit": "10g",
-      "price": 163451.0,
+      "price": 163089.0,
       "as_of": "2026-05-19",
       "status": "fresh",
       "cadence": "Live Mumbai bullion page",
       "notes": "Mumbai 999 quote including GST as labeled by All India Bullion.",
-      "price_inr_per_gram": 16345.1,
-      "price_usd_per_gram": 169.57,
-      "price_inr_per_10g": 163451.0,
-      "price_usd_per_oz": 5274.3
+      "price_inr_per_gram": 16308.9,
+      "price_usd_per_gram": 169.2,
+      "price_inr_per_10g": 163089.0,
+      "price_usd_per_oz": 5262.62
     },
     {
       "id": "upstox-999",
@@ -344,7 +344,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 15719.0,
-      "as_of": "19 May 2026",
+      "as_of": "20 May 2026",
       "status": "fresh",
       "cadence": "Localized consumer gold-rate page",
       "notes": "Chandigarh city reference from Goodreturns. Useful for local comparison, not an official benchmark.",
@@ -364,7 +364,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 14410.0,
-      "as_of": "19 May 2026",
+      "as_of": "20 May 2026",
       "status": "fresh",
       "cadence": "Localized consumer gold-rate page",
       "notes": "Chandigarh city reference from Goodreturns. Useful for jewellery context, not an official benchmark.",
@@ -384,7 +384,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 11793.0,
-      "as_of": "19 May 2026",
+      "as_of": "20 May 2026",
       "status": "fresh",
       "cadence": "Localized consumer gold-rate page",
       "notes": "Chandigarh city reference from Goodreturns. Useful for lower-purity jewellery context.",
@@ -404,7 +404,7 @@
       "currency": "INR",
       "unit": "10g",
       "price": 159136.0,
-      "as_of": "2026-05-19T18:29:46Z",
+      "as_of": "2026-05-19T20:18:01Z",
       "status": "fresh",
       "cadence": "Consumer gold-rate reference page",
       "notes": "India consumer reference rate. Shown as buyer context, not an official bullion benchmark.",
@@ -424,7 +424,7 @@
       "currency": "INR",
       "unit": "10g",
       "price": 146405.12,
-      "as_of": "2026-05-19T18:29:46Z",
+      "as_of": "2026-05-19T20:18:01Z",
       "status": "fresh",
       "cadence": "Consumer gold-rate reference page",
       "notes": "India consumer reference rate. Shown as jewellery context, not an official bullion benchmark.",
@@ -500,8 +500,8 @@
       "compared_rate_id": "global-spot-xau",
       "basis": "IBJA 24K",
       "compared_source_name": "Gold API XAU/USD",
-      "inr_per_gram_diff": -1968.65,
-      "pct_diff": -12.38,
+      "inr_per_gram_diff": -2005.22,
+      "pct_diff": -12.61,
       "status": "fresh"
     },
     {
@@ -518,8 +518,8 @@
       "compared_rate_id": "aib-mumbai-retail-999",
       "basis": "IBJA 24K",
       "compared_source_name": "All India Bullion Mumbai Retail 999",
-      "inr_per_gram_diff": -608.3,
-      "pct_diff": -3.82,
+      "inr_per_gram_diff": -624.2,
+      "pct_diff": -3.92,
       "status": "fresh"
     },
     {
@@ -527,8 +527,8 @@
       "compared_rate_id": "aib-mumbai-rtgs-999",
       "basis": "IBJA 24K",
       "compared_source_name": "All India Bullion Mumbai RTGS 999",
-      "inr_per_gram_diff": -38.9,
-      "pct_diff": -0.24,
+      "inr_per_gram_diff": -74.1,
+      "pct_diff": -0.47,
       "status": "fresh"
     },
     {
@@ -536,8 +536,8 @@
       "compared_rate_id": "aib-mumbai-gst-999",
       "basis": "IBJA 24K",
       "compared_source_name": "All India Bullion Mumbai 999 with GST",
-      "inr_per_gram_diff": 437.1,
-      "pct_diff": 2.75,
+      "inr_per_gram_diff": 400.9,
+      "pct_diff": 2.52,
       "status": "fresh"
     },
     {
@@ -572,8 +572,8 @@
       "compared_rate_id": "global-spot-xau",
       "basis": "GoldRateUAE (DGJG-derived mirror) 24K",
       "compared_source_name": "Gold API XAU/USD",
-      "inr_per_gram_diff": -292.77,
-      "pct_diff": -2.06,
+      "inr_per_gram_diff": -329.34,
+      "pct_diff": -2.31,
       "status": "fresh"
     },
     {
@@ -590,8 +590,8 @@
       "compared_rate_id": "aib-mumbai-retail-999",
       "basis": "GoldRateUAE (DGJG-derived mirror) 24K",
       "compared_source_name": "All India Bullion Mumbai Retail 999",
-      "inr_per_gram_diff": 1067.58,
-      "pct_diff": 7.5,
+      "inr_per_gram_diff": 1051.68,
+      "pct_diff": 7.39,
       "status": "fresh"
     },
     {
@@ -599,8 +599,8 @@
       "compared_rate_id": "aib-mumbai-rtgs-999",
       "basis": "GoldRateUAE (DGJG-derived mirror) 24K",
       "compared_source_name": "All India Bullion Mumbai RTGS 999",
-      "inr_per_gram_diff": 1636.98,
-      "pct_diff": 11.5,
+      "inr_per_gram_diff": 1601.78,
+      "pct_diff": 11.25,
       "status": "fresh"
     },
     {
@@ -608,8 +608,8 @@
       "compared_rate_id": "aib-mumbai-gst-999",
       "basis": "GoldRateUAE (DGJG-derived mirror) 24K",
       "compared_source_name": "All India Bullion Mumbai 999 with GST",
-      "inr_per_gram_diff": 2112.98,
-      "pct_diff": 14.85,
+      "inr_per_gram_diff": 2076.78,
+      "pct_diff": 14.59,
       "status": "fresh"
     },
     {
