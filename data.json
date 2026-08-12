@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-12T21:54:29Z",
+  "generated_at": "2026-08-12T22:51:11Z",
   "default_city": "Mumbai",
   "fx": {
     "usd_inr": 95.45,
     "source": "Fawaz Ahmed currency-api",
     "source_type": "Live fallback",
     "source_url": "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json",
-    "as_of": "2026-08-12T21:54:30Z",
+    "as_of": "2026-08-12T22:51:12Z",
     "status": "fresh",
     "cadence": "Live public no-key FX fallback",
     "notes": "Used because the official FBIL reference rate was not parseable from public page text."
@@ -23,15 +23,15 @@
       "fineness": 999,
       "currency": "USD",
       "unit": "troy_ounce",
-      "price": 4409.7,
-      "as_of": "2026-08-12T21:54:09Z",
+      "price": 4401.9,
+      "as_of": "2026-08-12T22:51:09Z",
       "status": "fresh",
       "cadence": "Live no-key public XAU/USD spot feed",
       "notes": "Live global spot context. Not an official fixing or a retail buyer price.",
-      "price_inr_per_gram": 13532.44,
-      "price_usd_per_gram": 141.78,
-      "price_inr_per_10g": 135324.38,
-      "price_usd_per_oz": 4409.7
+      "price_inr_per_gram": 13508.5,
+      "price_usd_per_gram": 141.52,
+      "price_inr_per_10g": 135085.01,
+      "price_usd_per_oz": 4401.9
     },
     {
       "id": "ibja-999",
@@ -44,7 +44,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 15342.0,
-      "as_of": "11/08/2026",
+      "as_of": "12/08/2026",
       "status": "fresh",
       "cadence": "Twice daily on business days, around 12:05 PM and 5:05 PM IST",
       "notes": "IBJA 999 purity rate. Used as the India benchmark.",
@@ -64,7 +64,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 14053.0,
-      "as_of": "11/08/2026",
+      "as_of": "12/08/2026",
       "status": "fresh",
       "cadence": "Twice daily on business days, around 12:05 PM and 5:05 PM IST",
       "notes": "IBJA 916 purity rate. Shown as jewellery context, not the primary benchmark.",
@@ -224,7 +224,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 16957.0,
-      "as_of": "2026-08-12T21:54:36Z",
+      "as_of": "2026-08-12T22:51:19Z",
       "status": "fresh",
       "cadence": "Retail jewellery page",
       "notes": "Retail jewellery context. Final purchase price may include GST, making charges, and SKU-level pricing.",
@@ -500,8 +500,8 @@
       "compared_rate_id": "global-spot-xau",
       "basis": "IBJA 24K",
       "compared_source_name": "Gold API XAU/USD",
-      "inr_per_gram_diff": -1809.56,
-      "pct_diff": -11.79,
+      "inr_per_gram_diff": -1833.5,
+      "pct_diff": -11.95,
       "status": "fresh"
     },
     {
@@ -563,8 +563,8 @@
       "compared_rate_id": "global-spot-xau",
       "basis": "Dubai City of Gold 24K",
       "compared_source_name": "Gold API XAU/USD",
-      "inr_per_gram_diff": 693.15,
-      "pct_diff": 5.4,
+      "inr_per_gram_diff": 669.21,
+      "pct_diff": 5.21,
       "status": "fresh"
     },
     {
