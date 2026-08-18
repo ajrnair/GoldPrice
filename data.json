@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-18T13:58:12Z",
+  "generated_at": "2026-08-18T14:44:32Z",
   "default_city": "Mumbai",
   "fx": {
     "usd_inr": 95.67,
     "source": "Fawaz Ahmed currency-api",
     "source_type": "Live fallback",
     "source_url": "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json",
-    "as_of": "2026-08-18T13:58:13Z",
+    "as_of": "2026-08-18T14:44:33Z",
     "status": "fresh",
     "cadence": "Live public no-key FX fallback",
     "notes": "Used because the official FBIL reference rate was not parseable from public page text."
@@ -23,15 +23,15 @@
       "fineness": 999,
       "currency": "USD",
       "unit": "troy_ounce",
-      "price": 4394.5,
-      "as_of": "2026-08-18T13:58:05Z",
+      "price": 4380.0,
+      "as_of": "2026-08-18T14:44:05Z",
       "status": "fresh",
       "cadence": "Live no-key public XAU/USD spot feed",
       "notes": "Live global spot context. Not an official fixing or a retail buyer price.",
-      "price_inr_per_gram": 13516.88,
-      "price_usd_per_gram": 141.29,
-      "price_inr_per_10g": 135168.75,
-      "price_usd_per_oz": 4394.5
+      "price_inr_per_gram": 13472.28,
+      "price_usd_per_gram": 140.82,
+      "price_inr_per_10g": 134722.75,
+      "price_usd_per_oz": 4380.0
     },
     {
       "id": "ibja-999",
@@ -83,15 +83,15 @@
       "fineness": 999,
       "currency": "AED",
       "unit": "gram",
-      "price": 490.0,
+      "price": 491.0,
       "as_of": "3 Aug 2026",
       "status": "fresh",
       "cadence": "Live retail benchmark when available",
       "notes": "Official Dubai public source.",
-      "price_inr_per_gram": 12764.68,
-      "price_usd_per_gram": 133.42,
-      "price_inr_per_10g": 127646.83,
-      "price_usd_per_oz": 4149.95
+      "price_inr_per_gram": 12790.73,
+      "price_usd_per_gram": 133.7,
+      "price_inr_per_10g": 127907.34,
+      "price_usd_per_oz": 4158.42
     },
     {
       "id": "mmtc-pamp-9999",
@@ -224,7 +224,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 17129.0,
-      "as_of": "2026-08-18T13:58:22Z",
+      "as_of": "2026-08-18T14:44:42Z",
       "status": "fresh",
       "cadence": "Retail jewellery page",
       "notes": "Retail jewellery context. Final purchase price may include GST, making charges, and SKU-level pricing.",
@@ -500,8 +500,8 @@
       "compared_rate_id": "global-spot-xau",
       "basis": "IBJA 24K",
       "compared_source_name": "Gold API XAU/USD",
-      "inr_per_gram_diff": -1891.12,
-      "pct_diff": -12.27,
+      "inr_per_gram_diff": -1935.72,
+      "pct_diff": -12.56,
       "status": "fresh"
     },
     {
@@ -509,8 +509,8 @@
       "compared_rate_id": "dubai-999",
       "basis": "IBJA 24K",
       "compared_source_name": "Dubai City of Gold",
-      "inr_per_gram_diff": -2643.32,
-      "pct_diff": -17.16,
+      "inr_per_gram_diff": -2617.27,
+      "pct_diff": -16.99,
       "status": "fresh"
     },
     {
@@ -536,8 +536,8 @@
       "compared_rate_id": "global-spot-xau",
       "basis": "Dubai City of Gold 24K",
       "compared_source_name": "Gold API XAU/USD",
-      "inr_per_gram_diff": 752.2,
-      "pct_diff": 5.89,
+      "inr_per_gram_diff": 681.55,
+      "pct_diff": 5.33,
       "status": "fresh"
     },
     {
@@ -545,8 +545,8 @@
       "compared_rate_id": "ibja-999",
       "basis": "Dubai City of Gold 24K",
       "compared_source_name": "IBJA",
-      "inr_per_gram_diff": 2643.32,
-      "pct_diff": 20.71,
+      "inr_per_gram_diff": 2617.27,
+      "pct_diff": 20.46,
       "status": "fresh"
     },
     {
@@ -554,8 +554,8 @@
       "compared_rate_id": "upstox-999",
       "basis": "Dubai City of Gold 24K",
       "compared_source_name": "Upstox India Gold Rate 24K",
-      "inr_per_gram_diff": 2817.32,
-      "pct_diff": 22.07,
+      "inr_per_gram_diff": 2791.27,
+      "pct_diff": 21.82,
       "status": "fresh"
     },
     {
@@ -563,8 +563,8 @@
       "compared_rate_id": "goodreturns-chandigarh-999",
       "basis": "Dubai City of Gold 24K",
       "compared_source_name": "Goodreturns Chandigarh 24K",
-      "inr_per_gram_diff": 2839.32,
-      "pct_diff": 22.24,
+      "inr_per_gram_diff": 2813.27,
+      "pct_diff": 21.99,
       "status": "fresh"
     }
   ],
