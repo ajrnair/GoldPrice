@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-25T21:09:07Z",
+  "generated_at": "2026-08-25T21:45:45Z",
   "default_city": "Mumbai",
   "fx": {
     "usd_inr": 95.75,
     "source": "Fawaz Ahmed currency-api",
     "source_type": "Live fallback",
     "source_url": "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json",
-    "as_of": "2026-08-25T21:09:08Z",
+    "as_of": "2026-08-25T21:45:46Z",
     "status": "fresh",
     "cadence": "Live public no-key FX fallback",
     "notes": "Used because the official FBIL reference rate was not parseable from public page text."
@@ -24,7 +24,7 @@
       "currency": "USD",
       "unit": "troy_ounce",
       "price": 4659.9,
-      "as_of": "2026-08-25T21:08:59Z",
+      "as_of": "2026-08-25T21:45:30Z",
       "status": "fresh",
       "cadence": "Live no-key public XAU/USD spot feed",
       "notes": "Live global spot context. Not an official fixing or a retail buyer price.",
@@ -224,7 +224,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 17988.0,
-      "as_of": "2026-08-25T21:09:15Z",
+      "as_of": "2026-08-25T21:45:54Z",
       "status": "fresh",
       "cadence": "Retail jewellery page",
       "notes": "Retail jewellery context. Final purchase price may include GST, making charges, and SKU-level pricing.",
