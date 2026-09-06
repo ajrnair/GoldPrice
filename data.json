@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-06T20:44:07Z",
+  "generated_at": "2026-09-06T22:27:03Z",
   "default_city": "Mumbai",
   "fx": {
     "usd_inr": 94.5,
     "source": "Fawaz Ahmed currency-api",
     "source_type": "Live fallback",
     "source_url": "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json",
-    "as_of": "2026-09-06T20:44:08Z",
+    "as_of": "2026-09-06T22:27:04Z",
     "status": "fresh",
     "cadence": "Live public no-key FX fallback",
     "notes": "Used because the official FBIL reference rate was not parseable from public page text."
@@ -23,15 +23,15 @@
       "fineness": 999,
       "currency": "USD",
       "unit": "troy_ounce",
-      "price": 4431.1,
-      "as_of": "2026-09-06T20:44:05Z",
+      "price": 4428.4,
+      "as_of": "2026-09-06T22:26:35Z",
       "status": "fresh",
       "cadence": "Live no-key public XAU/USD spot feed",
       "notes": "Live global spot context. Not an official fixing or a retail buyer price.",
-      "price_inr_per_gram": 13462.77,
-      "price_usd_per_gram": 142.46,
-      "price_inr_per_10g": 134627.7,
-      "price_usd_per_oz": 4431.1
+      "price_inr_per_gram": 13454.57,
+      "price_usd_per_gram": 142.38,
+      "price_inr_per_10g": 134545.66,
+      "price_usd_per_oz": 4428.4
     },
     {
       "id": "ibja-999",
@@ -224,7 +224,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 17010.0,
-      "as_of": "2026-09-06T20:44:16Z",
+      "as_of": "2026-09-06T22:27:13Z",
       "status": "fresh",
       "cadence": "Retail jewellery page",
       "notes": "Retail jewellery context. Final purchase price may include GST, making charges, and SKU-level pricing.",
@@ -500,8 +500,8 @@
       "compared_rate_id": "global-spot-xau",
       "basis": "IBJA 24K",
       "compared_source_name": "Gold API XAU/USD",
-      "inr_per_gram_diff": -2025.23,
-      "pct_diff": -13.08,
+      "inr_per_gram_diff": -2033.43,
+      "pct_diff": -13.13,
       "status": "fresh"
     },
     {
@@ -545,8 +545,8 @@
       "compared_rate_id": "global-spot-xau",
       "basis": "GoldRateUAE (DGJG-derived mirror) 24K",
       "compared_source_name": "Gold API XAU/USD",
-      "inr_per_gram_diff": -271.57,
-      "pct_diff": -1.98,
+      "inr_per_gram_diff": -279.77,
+      "pct_diff": -2.04,
       "status": "fresh"
     },
     {
