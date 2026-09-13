@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-13T21:22:32Z",
+  "generated_at": "2026-09-13T23:24:36Z",
   "default_city": "Mumbai",
   "fx": {
     "usd_inr": 95.57,
     "source": "Fawaz Ahmed currency-api",
     "source_type": "Live fallback",
     "source_url": "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json",
-    "as_of": "2026-09-13T21:22:33Z",
+    "as_of": "2026-09-13T23:24:37Z",
     "status": "fresh",
     "cadence": "Live public no-key FX fallback",
     "notes": "Used because the official FBIL reference rate was not parseable from public page text."
@@ -23,15 +23,15 @@
       "fineness": 999,
       "currency": "USD",
       "unit": "troy_ounce",
-      "price": 4349.7,
-      "as_of": "2026-09-13T21:22:06Z",
+      "price": 4338.1,
+      "as_of": "2026-09-13T23:24:36Z",
       "status": "fresh",
       "cadence": "Live no-key public XAU/USD spot feed",
       "notes": "Live global spot context. Not an official fixing or a retail buyer price.",
-      "price_inr_per_gram": 13365.09,
-      "price_usd_per_gram": 139.85,
-      "price_inr_per_10g": 133650.93,
-      "price_usd_per_oz": 4349.7
+      "price_inr_per_gram": 13329.45,
+      "price_usd_per_gram": 139.47,
+      "price_inr_per_10g": 133294.5,
+      "price_usd_per_oz": 4338.1
     },
     {
       "id": "ibja-999",
@@ -144,7 +144,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 15807.3,
-      "as_of": "2026-09-13T21:22:38Z",
+      "as_of": "2026-09-13T23:24:43Z",
       "status": "fresh",
       "cadence": "Live retail quote when available",
       "notes": "Digital gold source. Parsed only if a live quote is present in public page text.",
@@ -224,7 +224,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 16801.0,
-      "as_of": "2026-09-13T21:22:40Z",
+      "as_of": "2026-09-13T23:24:46Z",
       "status": "fresh",
       "cadence": "Retail jewellery page",
       "notes": "Retail jewellery context. Final purchase price may include GST, making charges, and SKU-level pricing.",
@@ -500,8 +500,8 @@
       "compared_rate_id": "global-spot-xau",
       "basis": "IBJA 24K",
       "compared_source_name": "Gold API XAU/USD",
-      "inr_per_gram_diff": -1828.91,
-      "pct_diff": -12.04,
+      "inr_per_gram_diff": -1864.55,
+      "pct_diff": -12.27,
       "status": "fresh"
     },
     {
@@ -554,8 +554,8 @@
       "compared_rate_id": "global-spot-xau",
       "basis": "Dubai City of Gold 24K",
       "compared_source_name": "Gold API XAU/USD",
-      "inr_per_gram_diff": 737.36,
-      "pct_diff": 5.84,
+      "inr_per_gram_diff": 701.72,
+      "pct_diff": 5.56,
       "status": "fresh"
     },
     {
