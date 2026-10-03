@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-03T11:30:41Z",
+  "generated_at": "2026-10-03T15:14:49Z",
   "default_city": "Mumbai",
   "fx": {
     "usd_inr": 96.29,
     "source": "Fawaz Ahmed currency-api",
     "source_type": "Live fallback",
     "source_url": "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json",
-    "as_of": "2026-10-03T11:30:43Z",
+    "as_of": "2026-10-03T15:14:49Z",
     "status": "fresh",
     "cadence": "Live public no-key FX fallback",
     "notes": "Used because the official FBIL reference rate was not parseable from public page text."
@@ -24,7 +24,7 @@
       "currency": "USD",
       "unit": "troy_ounce",
       "price": 4141.8,
-      "as_of": "2026-10-03T11:30:31Z",
+      "as_of": "2026-10-03T15:14:32Z",
       "status": "fresh",
       "cadence": "Live no-key public XAU/USD spot feed",
       "notes": "Live global spot context. Not an official fixing or a retail buyer price.",
@@ -143,15 +143,15 @@
       "fineness": 999,
       "currency": "INR",
       "unit": "gram",
-      "price": 15325.26,
-      "as_of": "2026-10-03T11:30:48Z",
+      "price": 15223.91,
+      "as_of": "2026-10-03T15:14:56Z",
       "status": "fresh",
       "cadence": "Live retail quote when available",
       "notes": "Digital gold source. Parsed only if a live quote is present in public page text.",
-      "price_inr_per_gram": 15325.26,
-      "price_usd_per_gram": 159.16,
-      "price_inr_per_10g": 153252.6,
-      "price_usd_per_oz": 4950.35
+      "price_inr_per_gram": 15223.91,
+      "price_usd_per_gram": 158.1,
+      "price_inr_per_10g": 152239.1,
+      "price_usd_per_oz": 4917.61
     },
     {
       "id": "tanishq-999",
@@ -224,7 +224,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 16451.0,
-      "as_of": "2026-10-03T11:30:50Z",
+      "as_of": "2026-10-03T15:14:57Z",
       "status": "fresh",
       "cadence": "Retail jewellery page",
       "notes": "Retail jewellery context. Final purchase price may include GST, making charges, and SKU-level pricing.",
@@ -518,8 +518,8 @@
       "compared_rate_id": "augmont-999",
       "basis": "IBJA 24K",
       "compared_source_name": "Augmont",
-      "inr_per_gram_diff": 511.26,
-      "pct_diff": 3.45,
+      "inr_per_gram_diff": 409.91,
+      "pct_diff": 2.77,
       "status": "fresh"
     },
     {
@@ -572,8 +572,8 @@
       "compared_rate_id": "augmont-999",
       "basis": "Dubai City of Gold 24K",
       "compared_source_name": "Augmont",
-      "inr_per_gram_diff": 3211.99,
-      "pct_diff": 26.52,
+      "inr_per_gram_diff": 3110.64,
+      "pct_diff": 25.68,
       "status": "fresh"
     },
     {
