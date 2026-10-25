@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-24T22:23:13Z",
+  "generated_at": "2026-10-25T00:28:57Z",
   "default_city": "Mumbai",
   "fx": {
     "usd_inr": 94.95,
     "source": "Fawaz Ahmed currency-api",
     "source_type": "Live fallback",
     "source_url": "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json",
-    "as_of": "2026-10-24T22:23:14Z",
+    "as_of": "2026-10-25T00:28:58Z",
     "status": "fresh",
     "cadence": "Live public no-key FX fallback",
     "notes": "Used because the official FBIL reference rate was not parseable from public page text."
@@ -23,15 +23,15 @@
       "fineness": 999,
       "currency": "USD",
       "unit": "troy_ounce",
-      "price": null,
-      "as_of": null,
-      "status": "unavailable",
+      "price": 3996.9,
+      "as_of": "2026-10-25T00:28:37Z",
+      "status": "fresh",
       "cadence": "Live no-key public XAU/USD spot feed",
-      "notes": "Live global spot context was not parseable. No estimate was substituted.",
-      "price_inr_per_gram": null,
-      "price_usd_per_gram": null,
-      "price_inr_per_10g": null,
-      "price_usd_per_oz": null
+      "notes": "Live global spot context. Not an official fixing or a retail buyer price.",
+      "price_inr_per_gram": 12201.39,
+      "price_usd_per_gram": 128.5,
+      "price_inr_per_10g": 122013.9,
+      "price_usd_per_oz": 3996.9
     },
     {
       "id": "ibja-999",
@@ -144,7 +144,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 14555.05,
-      "as_of": "2026-10-24T22:23:19Z",
+      "as_of": "2026-10-25T00:29:04Z",
       "status": "fresh",
       "cadence": "Live retail quote when available",
       "notes": "Digital gold source. Parsed only if a live quote is present in public page text.",
@@ -224,7 +224,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 15730.0,
-      "as_of": "2026-10-24T22:23:22Z",
+      "as_of": "2026-10-25T00:29:06Z",
       "status": "fresh",
       "cadence": "Retail jewellery page",
       "notes": "Retail jewellery context. Final purchase price may include GST, making charges, and SKU-level pricing.",
@@ -404,7 +404,7 @@
       "currency": "INR",
       "unit": "10g",
       "price": 142580.0,
-      "as_of": "24 Oct 2026",
+      "as_of": "25 Oct 2026",
       "status": "fresh",
       "cadence": "Consumer gold-rate reference page",
       "notes": "India consumer reference rate. Shown as buyer context, not an official bullion benchmark.",
@@ -424,7 +424,7 @@
       "currency": "INR",
       "unit": "10g",
       "price": 130700.0,
-      "as_of": "24 Oct 2026",
+      "as_of": "25 Oct 2026",
       "status": "fresh",
       "cadence": "Consumer gold-rate reference page",
       "notes": "India consumer reference rate. Shown as jewellery context, not an official bullion benchmark.",
@@ -497,6 +497,15 @@
   "spreads": [
     {
       "basis_rate_id": "ibja-999",
+      "compared_rate_id": "global-spot-xau",
+      "basis": "IBJA 24K",
+      "compared_source_name": "Gold API XAU/USD",
+      "inr_per_gram_diff": -1961.61,
+      "pct_diff": -13.85,
+      "status": "fresh"
+    },
+    {
+      "basis_rate_id": "ibja-999",
       "compared_rate_id": "dubai-999",
       "basis": "IBJA 24K",
       "compared_source_name": "Dubai City of Gold",
@@ -538,6 +547,15 @@
       "compared_source_name": "Groww India Gold Rate 24K",
       "inr_per_gram_diff": 95.0,
       "pct_diff": 0.67,
+      "status": "fresh"
+    },
+    {
+      "basis_rate_id": "dubai-999",
+      "compared_rate_id": "global-spot-xau",
+      "basis": "Dubai City of Gold 24K",
+      "compared_source_name": "Gold API XAU/USD",
+      "inr_per_gram_diff": 670.36,
+      "pct_diff": 5.81,
       "status": "fresh"
     },
     {
