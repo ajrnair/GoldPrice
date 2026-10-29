@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-28T20:20:56Z",
+  "generated_at": "2026-10-29T00:16:54Z",
   "default_city": "Mumbai",
   "fx": {
     "usd_inr": 95.14,
     "source": "Fawaz Ahmed currency-api",
     "source_type": "Live fallback",
     "source_url": "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json",
-    "as_of": "2026-10-28T20:20:57Z",
+    "as_of": "2026-10-29T00:16:56Z",
     "status": "fresh",
     "cadence": "Live public no-key FX fallback",
     "notes": "Used because the official FBIL reference rate was not parseable from public page text."
@@ -23,15 +23,15 @@
       "fineness": 999,
       "currency": "USD",
       "unit": "troy_ounce",
-      "price": 4069.1,
-      "as_of": "2026-10-28T20:20:58Z",
+      "price": 4045.1,
+      "as_of": "2026-10-29T00:16:30Z",
       "status": "fresh",
       "cadence": "Live no-key public XAU/USD spot feed",
       "notes": "Live global spot context. Not an official fixing or a retail buyer price.",
-      "price_inr_per_gram": 12446.65,
-      "price_usd_per_gram": 130.82,
-      "price_inr_per_10g": 124466.53,
-      "price_usd_per_oz": 4069.1
+      "price_inr_per_gram": 12373.24,
+      "price_usd_per_gram": 130.05,
+      "price_inr_per_10g": 123732.41,
+      "price_usd_per_oz": 4045.1
     },
     {
       "id": "ibja-999",
@@ -44,7 +44,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 14271.0,
-      "as_of": "27/10/2026",
+      "as_of": "28/10/2026",
       "status": "fresh",
       "cadence": "Twice daily on business days, around 12:05 PM and 5:05 PM IST",
       "notes": "IBJA 999 purity rate. Used as the India benchmark.",
@@ -64,7 +64,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 13072.0,
-      "as_of": "27/10/2026",
+      "as_of": "28/10/2026",
       "status": "fresh",
       "cadence": "Twice daily on business days, around 12:05 PM and 5:05 PM IST",
       "notes": "IBJA 916 purity rate. Shown as jewellery context, not the primary benchmark.",
@@ -83,15 +83,15 @@
       "fineness": 999,
       "currency": "AED",
       "unit": "gram",
-      "price": 455.25,
+      "price": 451.75,
       "as_of": "15 Oct 2026",
       "status": "fresh",
       "cadence": "Live retail benchmark when available",
       "notes": "Official Dubai public source.",
-      "price_inr_per_gram": 11793.73,
-      "price_usd_per_gram": 123.96,
-      "price_inr_per_10g": 117937.33,
-      "price_usd_per_oz": 3855.65
+      "price_inr_per_gram": 11703.06,
+      "price_usd_per_gram": 123.01,
+      "price_inr_per_10g": 117030.62,
+      "price_usd_per_oz": 3826.0
     },
     {
       "id": "mmtc-pamp-9999",
@@ -144,7 +144,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 14527.3,
-      "as_of": "2026-10-28T20:21:04Z",
+      "as_of": "2026-10-29T00:17:02Z",
       "status": "fresh",
       "cadence": "Live retail quote when available",
       "notes": "Digital gold source. Parsed only if a live quote is present in public page text.",
@@ -224,7 +224,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 15881.0,
-      "as_of": "2026-10-28T20:21:05Z",
+      "as_of": "2026-10-29T00:17:05Z",
       "status": "fresh",
       "cadence": "Retail jewellery page",
       "notes": "Retail jewellery context. Final purchase price may include GST, making charges, and SKU-level pricing.",
@@ -343,15 +343,15 @@
       "fineness": 999,
       "currency": "INR",
       "unit": "gram",
-      "price": 14410.0,
+      "price": 14411.0,
       "as_of": "29 October 2026",
       "status": "fresh",
       "cadence": "Localized consumer gold-rate page",
       "notes": "Chandigarh city reference from Goodreturns. Useful for local comparison, not an official benchmark.",
-      "price_inr_per_gram": 14410.0,
-      "price_usd_per_gram": 151.46,
-      "price_inr_per_10g": 144100.0,
-      "price_usd_per_oz": 4710.96
+      "price_inr_per_gram": 14411.0,
+      "price_usd_per_gram": 151.47,
+      "price_inr_per_10g": 144110.0,
+      "price_usd_per_oz": 4711.29
     },
     {
       "id": "goodreturns-chandigarh-916",
@@ -363,15 +363,15 @@
       "fineness": 916,
       "currency": "INR",
       "unit": "gram",
-      "price": 13210.0,
+      "price": 13211.0,
       "as_of": "29 October 2026",
       "status": "fresh",
       "cadence": "Localized consumer gold-rate page",
       "notes": "Chandigarh city reference from Goodreturns. Useful for jewellery context, not an official benchmark.",
-      "price_inr_per_gram": 13210.0,
-      "price_usd_per_gram": 138.85,
-      "price_inr_per_10g": 132100.0,
-      "price_usd_per_oz": 4318.66
+      "price_inr_per_gram": 13211.0,
+      "price_usd_per_gram": 138.86,
+      "price_inr_per_10g": 132110.0,
+      "price_usd_per_oz": 4318.98
     },
     {
       "id": "goodreturns-chandigarh-750",
@@ -383,15 +383,15 @@
       "fineness": 750,
       "currency": "INR",
       "unit": "gram",
-      "price": 10811.0,
+      "price": 10812.0,
       "as_of": "29 October 2026",
       "status": "fresh",
       "cadence": "Localized consumer gold-rate page",
       "notes": "Chandigarh city reference from Goodreturns. Useful for lower-purity jewellery context.",
-      "price_inr_per_gram": 10811.0,
-      "price_usd_per_gram": 113.63,
-      "price_inr_per_10g": 108110.0,
-      "price_usd_per_oz": 3534.37
+      "price_inr_per_gram": 10812.0,
+      "price_usd_per_gram": 113.64,
+      "price_inr_per_10g": 108120.0,
+      "price_usd_per_oz": 3534.69
     },
     {
       "id": "groww-999",
@@ -500,8 +500,8 @@
       "compared_rate_id": "global-spot-xau",
       "basis": "IBJA 24K",
       "compared_source_name": "Gold API XAU/USD",
-      "inr_per_gram_diff": -1824.35,
-      "pct_diff": -12.78,
+      "inr_per_gram_diff": -1897.76,
+      "pct_diff": -13.3,
       "status": "fresh"
     },
     {
@@ -509,8 +509,8 @@
       "compared_rate_id": "dubai-999",
       "basis": "IBJA 24K",
       "compared_source_name": "Dubai City of Gold",
-      "inr_per_gram_diff": -2477.27,
-      "pct_diff": -17.36,
+      "inr_per_gram_diff": -2567.94,
+      "pct_diff": -17.99,
       "status": "fresh"
     },
     {
@@ -536,8 +536,8 @@
       "compared_rate_id": "goodreturns-chandigarh-999",
       "basis": "IBJA 24K",
       "compared_source_name": "Goodreturns Chandigarh 24K",
-      "inr_per_gram_diff": 139.0,
-      "pct_diff": 0.97,
+      "inr_per_gram_diff": 140.0,
+      "pct_diff": 0.98,
       "status": "fresh"
     },
     {
@@ -554,8 +554,8 @@
       "compared_rate_id": "global-spot-xau",
       "basis": "Dubai City of Gold 24K",
       "compared_source_name": "Gold API XAU/USD",
-      "inr_per_gram_diff": 652.92,
-      "pct_diff": 5.54,
+      "inr_per_gram_diff": 670.18,
+      "pct_diff": 5.73,
       "status": "fresh"
     },
     {
@@ -563,8 +563,8 @@
       "compared_rate_id": "ibja-999",
       "basis": "Dubai City of Gold 24K",
       "compared_source_name": "IBJA",
-      "inr_per_gram_diff": 2477.27,
-      "pct_diff": 21.0,
+      "inr_per_gram_diff": 2567.94,
+      "pct_diff": 21.94,
       "status": "fresh"
     },
     {
@@ -572,8 +572,8 @@
       "compared_rate_id": "augmont-999",
       "basis": "Dubai City of Gold 24K",
       "compared_source_name": "Augmont",
-      "inr_per_gram_diff": 2733.57,
-      "pct_diff": 23.18,
+      "inr_per_gram_diff": 2824.24,
+      "pct_diff": 24.13,
       "status": "fresh"
     },
     {
@@ -581,8 +581,8 @@
       "compared_rate_id": "upstox-999",
       "basis": "Dubai City of Gold 24K",
       "compared_source_name": "Upstox India Gold Rate 24K",
-      "inr_per_gram_diff": 2536.27,
-      "pct_diff": 21.51,
+      "inr_per_gram_diff": 2626.94,
+      "pct_diff": 22.45,
       "status": "fresh"
     },
     {
@@ -590,8 +590,8 @@
       "compared_rate_id": "goodreturns-chandigarh-999",
       "basis": "Dubai City of Gold 24K",
       "compared_source_name": "Goodreturns Chandigarh 24K",
-      "inr_per_gram_diff": 2616.27,
-      "pct_diff": 22.18,
+      "inr_per_gram_diff": 2707.94,
+      "pct_diff": 23.14,
       "status": "fresh"
     },
     {
@@ -599,8 +599,8 @@
       "compared_rate_id": "groww-999",
       "basis": "Dubai City of Gold 24K",
       "compared_source_name": "Groww India Gold Rate 24K",
-      "inr_per_gram_diff": 2601.27,
-      "pct_diff": 22.06,
+      "inr_per_gram_diff": 2691.94,
+      "pct_diff": 23.0,
       "status": "fresh"
     }
   ],
