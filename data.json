@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-01T00:21:23Z",
+  "generated_at": "2026-11-01T06:42:29Z",
   "default_city": "Mumbai",
   "fx": {
     "usd_inr": 94.92,
     "source": "Fawaz Ahmed currency-api",
     "source_type": "Live fallback",
     "source_url": "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json",
-    "as_of": "2026-11-01T00:21:24Z",
+    "as_of": "2026-11-01T06:42:30Z",
     "status": "fresh",
     "cadence": "Live public no-key FX fallback",
     "notes": "Used because the official FBIL reference rate was not parseable from public page text."
@@ -24,7 +24,7 @@
       "currency": "USD",
       "unit": "troy_ounce",
       "price": 3876.4,
-      "as_of": "2026-11-01T00:21:00Z",
+      "as_of": "2026-11-01T06:42:03Z",
       "status": "fresh",
       "cadence": "Live no-key public XAU/USD spot feed",
       "notes": "Live global spot context. Not an official fixing or a retail buyer price.",
@@ -144,7 +144,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 14139.83,
-      "as_of": "2026-11-01T00:21:29Z",
+      "as_of": "2026-11-01T06:42:37Z",
       "status": "fresh",
       "cadence": "Live retail quote when available",
       "notes": "Digital gold source. Parsed only if a live quote is present in public page text.",
@@ -224,7 +224,7 @@
       "currency": "INR",
       "unit": "gram",
       "price": 15325.0,
-      "as_of": "2026-11-01T00:21:32Z",
+      "as_of": "2026-11-01T06:42:40Z",
       "status": "fresh",
       "cadence": "Retail jewellery page",
       "notes": "Retail jewellery context. Final purchase price may include GST, making charges, and SKU-level pricing.",
@@ -403,15 +403,15 @@
       "fineness": 999,
       "currency": "INR",
       "unit": "10g",
-      "price": 142260.0,
-      "as_of": "30 Oct 2026",
+      "price": 138880.0,
+      "as_of": "01 Nov 2026",
       "status": "fresh",
       "cadence": "Consumer gold-rate reference page",
       "notes": "India consumer reference rate. Shown as buyer context, not an official bullion benchmark.",
-      "price_inr_per_gram": 14226.0,
-      "price_usd_per_gram": 149.87,
-      "price_inr_per_10g": 142260.0,
-      "price_usd_per_oz": 4661.59
+      "price_inr_per_gram": 13888.0,
+      "price_usd_per_gram": 146.31,
+      "price_inr_per_10g": 138880.0,
+      "price_usd_per_oz": 4550.83
     },
     {
       "id": "groww-916",
@@ -423,15 +423,15 @@
       "fineness": 916,
       "currency": "INR",
       "unit": "10g",
-      "price": 130410.0,
-      "as_of": "30 Oct 2026",
+      "price": 127310.0,
+      "as_of": "01 Nov 2026",
       "status": "fresh",
       "cadence": "Consumer gold-rate reference page",
       "notes": "India consumer reference rate. Shown as jewellery context, not an official bullion benchmark.",
-      "price_inr_per_gram": 13041.0,
-      "price_usd_per_gram": 137.39,
-      "price_inr_per_10g": 130410.0,
-      "price_usd_per_oz": 4273.29
+      "price_inr_per_gram": 12731.0,
+      "price_usd_per_gram": 134.12,
+      "price_inr_per_10g": 127310.0,
+      "price_usd_per_oz": 4171.71
     },
     {
       "id": "mcx-gold-futures",
@@ -545,8 +545,8 @@
       "compared_rate_id": "groww-999",
       "basis": "IBJA 24K",
       "compared_source_name": "Groww India Gold Rate 24K",
-      "inr_per_gram_diff": 221.0,
-      "pct_diff": 1.58,
+      "inr_per_gram_diff": -117.0,
+      "pct_diff": -0.84,
       "status": "fresh"
     },
     {
@@ -599,8 +599,8 @@
       "compared_rate_id": "groww-999",
       "basis": "Dubai City of Gold 24K",
       "compared_source_name": "Groww India Gold Rate 24K",
-      "inr_per_gram_diff": 3047.54,
-      "pct_diff": 27.26,
+      "inr_per_gram_diff": 2709.54,
+      "pct_diff": 24.24,
       "status": "fresh"
     }
   ],
